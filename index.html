@@ -4,6 +4,8 @@
 <html>
 
   <head>
+    <link rel="styleSheet" href="./index.css"/
+       
   </head>
   
   <body>
@@ -28,5 +30,170 @@
   </div>
 
   </body>
+    
+    <script>
+   
+
+          const myBio = {
+          name: "Paul Kim",
+          age:"30 years old",
+          hometown: "Orange County, California",
+          hobbies: "I love the outdoors and doing action sports, Rock Climbing, Skating, Snowboarding etc etc."
+          }
+
+   
+          }
+//personal EXP
+         const myExp = {
+          edu: ["Northwood Highschool class of 2010", "University of Irvine (2010-2012)", "Western Governers University School of Buisness Management and administration (2020-Present)"],
+          formaledu:["Basic Leaders Course", "Advanced Leaders Course", "LeanSixSigma Yellow belt", "CompTia SEC+", "Ranger Master Breacher", "Special Forces Urban Assualters Combat Course", "Forensic University Operators Basic Course", "Special Forces Technical Survailence Operator", "Special Forces Tedhnical Exploitation Course"],
+          workExp: ["Tacoma mission (seasonal)", "Bethel Church Kids Camp (2006-2010)", "PPS Parking Valet(2010-2013)", "75th Ranger Regiment (2014-present)"],
+          } 
+
+ 
+        const myContact = {
+        email: "paulkim022@yoohoo.com",
+        phonenumber: "911",
+
+          }
+         window.onload = function() {
+         const defaultTab = document.getElementById("bioTab")
+         defaultTab.click()
+          }
+ 
+          const viewTab = document.getElementById("bioTab")
+          bioTab.addEventListener("click", () => {
+          const viewContent = document.getElementById("chosenContent")
+        	viewContent.innerHTML = ""
+  
+           const aboutMe = document.createElement("div")
+  	        aboutMe.innerHTML = "About Me:"
+  	        aboutMe.id = "idAboutMe"
+  	        aboutMe.classList.add("aboutme")
+  	        viewContent.appendChild(aboutMe)
+   
+ //name 
+  const name = document.createElement("div")
+  	name.innerHTML = "Name: "
+  	name.classList.add("bioNameC")
+  const nameValue = document.createElement("span")
+  	nameValue.innerHTML = myBio.name
+  	name.appendChild(nameValue)
+  	viewContent.appendChild(name)
+//age
+  const age = document.createElement("div")
+  	age.innerHTML = "age: "
+  	age.classList.add("ageC")
+  const ageResult = document.createElement("span")
+  	ageResult.innerHTML = myBio.age
+  	age.appendChild(ageResult)
+ 		viewContent.appendChild(age)
+//hometown  
+ const homeTown = document.createElement("div")
+  	homeTown.innerHTML = "From: "
+ 	 	homeTown.classList.add("homeTownC")
+  const homeResult = document.createElement("span")
+  	homeResult.innerHTML = myBio.hometown
+    homeTown.appendChild(homeResult)
+  	viewContent.appendChild(homeTown)
+ //hobbies 
+  const hobbies = document.createElement("div")
+    hobbies.innerHTML = "Hobbies: "
+    hobbies.classList.add ("hobbiesC")
+    const hobbiesResult = document.createElement("span")
+    hobbiesResult.innerHTML = myBio.hobbies
+    hobbies.appendChild(hobbiesResult)
+    viewContent.appendChild(hobbies)
+ 
+
+		const expTab = document.getElementById("expTab")
+
+		expTab.addEventListener("click", () => {
+  	const expContent = document.getElementById("chosenContent")
+  	expContent.innerHTML = ""
+  
+  	const expOptions = document.createElement("div")
+  	expOptions.id = "expOptions"
+  	expOptions.classList.add("expButtons")
+  	expContent.appendChild(expOptions)
+  
+ 		
+    
+    const education = document.createElement("button")
+  	education.id = "edu"
+  	education.classList.add("expContent")
+  	education.innerHTML = "Education"
+  	expOptions.appendChild(education)
+   
+    education.addEventListener("click",() =>{
+    const educationResult = document.getElementById("edu")
+    educationResult.innerHTML = "Education: "
+  
+   const eduResult = document.createElement("div")
+    eduResult.classList.add("cont")
+   eduResult.id = "content"
+   eduResult.innerHTML = myExp.edu
+  	educationResult.appendChild(eduResult)
+	
+
+	  })   
+    
+  	const formalEdu = document.createElement("button")
+ 		formalEdu.id = "formId"
+  	formalEdu.classList.add("expContent")
+ 		formalEdu.innerHTML = "Formal Training"
+  	expOptions.appendChild(formalEdu)
+    
+ 	formalEdu.addEventListener("click",()=>{
+  const formalEducation = document.getElementById("formId")
+  formalEducation.innerHTML = "Formal Training: "
+  
+    const formalResults = document.createElement("div")
+    formalResults.id = "formRes"
+    formalResults.innerHTML = myExp.formaledu
+    formalEducation.appendChild(formalResults)
+    if(formalResults.innerHTML === myExp.formaledu){ }
+     })   
+   
+   
+    const workExp = document.createElement("button")
+  	workExp.id = "workExp"
+  	workExp.classList.add("expContent")
+  	workExp.innerHTML = "Work History"
+  	expOptions.appendChild(workExp)
+  
+  	workExp.addEventListener("click", ()=>{
+    const workHistory = document.getElementById("workExp")
+    workHistory.innerHTML = "Work Experience: "
+ 
+   const workResult = document.createElement("div")
+    workResult.innerHTML = myExp.workExp
+    workHistory.appendChild(workResult)
+    })
+   
+    const conTab = document.getElementById("contactTab")
+    conTab.addEventListener("click", () =>{
+    const conContent = document.getElementById("chosenContent")
+    conContent.classList.add("conContentC")
+    conContent.innerHTML = ""
+
+
+    const conEmail = document.createElement("div")
+
+    conEmail.innerHTML = "Email: "
+    const myContactEmail = document.createElement("span")
+    myContactEmail.innerHTML = myContact.email
+    conEmail.appendChild(myContactEmail)
+    conContent.appendChild(conEmail)
+
+    const conPhone = document.createElement("div")
+    conPhone.innerHTML = "Phone: "
+    const myPhone = document.createElement("span")
+    myPhone.innerHTML = myContact.phonenumber
+    conPhone.appendChild(myPhone)
+    conContent.appendChild(conPhone)
+      
+    </script>
+    
 
  </html>
