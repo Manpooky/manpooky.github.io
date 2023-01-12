@@ -1,0 +1,100 @@
+
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Comic Sans ms;
+  color: white;
+}
+
+.bigBoss {
+  background: #4C5363;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.myTitle {
+  background-color: #4C5363;
+  text-align: center;
+  
+  padding: 20px;
+
+}
+
+.learningFlex {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabSelector {
+  color: #12B097;
+  border-bottom: solid 2px #12B097;
+}
+
+.tabSelector:{
+ float: left;
+  width: 33.33%;
+  }
+  
+.tabSelector:hover {
+  cursor: pointer;
+}
+
+.chosenClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+ 
+}
+
+.btnClass {
+  background: #12B097;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.dataSpacer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.expButtons {
+  display: flex;
+  float: left;
+  padding: 15px;
+  justify-content: space-between;
+  
+}
+
+.expButtons:hover {
+  cursor: pointer;
+}
+.expContent:hover{
+  cursor: pointer;
+}
+.expContent:{
+  float:left;
+  width:33.33%;
+  padding: 5px;
+}
+
+
+.conContentC {
+  display: flex;
+  justify-content: space-evenly;
+}
+
